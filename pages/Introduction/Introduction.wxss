@@ -1,0 +1,87 @@
+/* pages/Introduction/Introduction.wxss */
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: darkslategrey;
+  padding: 16px;
+}
+
+.item_left_image{
+  flex:1 ;
+}
+.item_left_image image{
+  width:120px;
+  height: 190px
+}
+
+.info-container{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20rpx 0 20rpx 0
+}
+
+.info-row{
+  font-size: 24rpx;
+  color: white
+}
+view.text {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 10px 10px 12px;
+  font-size: 15px;
+  color: #656565;
+}
+view.text:before {
+  position: absolute;
+  display: block;
+  content: ' ';
+  left: -5px;
+  width: 2px;
+  height: 100%;
+  background-color: #09bb07;
+}
+.line_flag {
+    width: 3px;
+    height: 100%;
+    height: 18px;
+    display: inline-block;
+    background-color: #09bb07;
+}
+view.text text {
+  margin-left: 10px;
+  line-height: 18px;
+}
+.movie-intr{
+  background-color:  ghostwhite;
+  font-size: 30rpx;
+  padding: 40rpx;
+  line-height: 60rpx
+}
+
+.movie-buy{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background:#fff linear-gradient(180deg,#e1e1e1,#e1e1e1 50%,transparent 0) 0 0/100% 1px no-repeat;
+  text-align: center;
+}
+.movie-buy .btn-buy{
+  display: block;
+  margin: 20rpx 30rpx;
+  background-color: #ff4d64;
+  font-size: 20px;
+  line-height: 80rpx;
+  color: #fff;
+  border-radius: 4px;
+}
+
+
+
+
+
+

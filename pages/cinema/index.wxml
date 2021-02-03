@@ -1,0 +1,26 @@
+<!-- 影院界面以及搜索 -->
+<!--搜索框 -->
+<view class='page_row' >
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='16' type='search'></icon>
+        <input class="sousuo" disabled placeholder="搜索" bindtap='search'/>
+      </view>
+    </view>
+  </view>
+
+  
+<!-- 内容主体 -->
+<view class="container">
+  <block wx:for="{{list}}" wx:key="*this">
+    <view class="flex item" bindtap="goSession" data-name="{{item.cinema_name}}">
+      <view class="flex_auto item_left">
+        <view><text class="cinema_name">{{item.cinema_name}}</text></view>
+        <view><text class="cinema_title">{{item.cinema_title}}</text></view>
+      </view>
+      <view class="item_right">
+        <view><text class="cinema_price">￥{{item.cinema_price}}起</text></view>
+      </view>
+    </view>
+  </block>
+</view>

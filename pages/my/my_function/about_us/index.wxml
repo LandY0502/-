@@ -1,0 +1,16 @@
+<!--pages/my/my_/about_us/index.wxml-->
+<!-- 关于我们的页面 -->
+<view class="container">
+  <view hover-stop-propagation="false" bindtap="callme"><text>有本事你过来找我？
+  </text></view>
+</view>
+
+ 
+<!-- 这是地图部分 -->
+<view class="map_container">
+  <map class='map' longitude='{{longitude}}' latitude='{{latitude}}' scale='{{scale}}' markers='{{markers}}' controls="{{controls}}" bindcontroltap="bindcontroltap" polyline='{{polyline}}' circles="{{circles}}" bindmarkertap='bindmarkertap' bindcontroltap='bindcontroltap'
+    show-location></map>
+</view>
+ 
+
+

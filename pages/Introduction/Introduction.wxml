@@ -1,0 +1,46 @@
+<!--电影简介页面-->
+
+<block wx:for="{{lists}}" wx:key="*this">
+  <!-- 头部信息 -->
+  <view class="container">
+    <!-- 图片 -->
+    <view class="item_left_image">
+      <image src="{{item.move_image}}" />
+    </view>
+    <!-- 内容 -->
+    <view class="info-container">
+      <!-- 电影名字 -->
+      <view class="info-row">
+        <text>{{item.move_name}}</text>
+        <br />
+      </view>
+      <!-- 电影评分 -->
+      <view class="info-row">
+        <text>评分：{{item.move_score}}</text>
+      </view>
+      <!-- 电影演员 -->
+      <view class="info-row">
+        <text>{{item.move_actor}}</text>
+      </view>
+      <!-- 上映地点 -->
+      <view class="info-row">
+        <text>在中国大陆上映</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 电影简介内容 -->
+  <view class="text">
+    <view class="line_flag"></view>
+    <text>电影简介</text>
+  </view>
+  <view class="movie-intr">
+    <text>{{item.move_title}}</text>
+  </view>
+
+
+  <!-- 购买电影票 -->
+  <view class="movie-buy">
+    <text class="btn-buy" bindtap="buyMove">添加喜欢</text>
+  </view>
+</block>

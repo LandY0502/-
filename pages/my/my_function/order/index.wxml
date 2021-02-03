@@ -1,0 +1,32 @@
+<block wx:for="{{lists}}" wx:key="*this">
+<view class="container">
+    <!-- 图片 -->
+    <view class="item_left_image">
+      <image src="{{item.order_image}}" />
+    </view>
+    <!-- 内容 -->
+    <view class="info-container">
+      <!-- 电影名字 -->
+      <view class="info-row">
+        <text>{{item.order_name}}</text>
+        <br />
+      </view>
+      <!-- 电影座位 -->
+      <view class="info-row">
+        <text>座位：{{item.order_seat}}</text>
+      </view>
+      <!-- 播放时间 -->
+      <view class="info-row">
+        <text>日期：{{item.order_time}}</text>
+      </view>
+      <!-- 影院 -->
+      <view class="info-row">
+        <text>影院：{{item.order_cinema}}</text>
+      </view>
+    </view> 
+
+    <view class="item_right" bindtap="del" id="{{item.id}}">
+        <view><text class="btn_del">删除订单</text></view>
+      </view>
+  </view>
+</block>

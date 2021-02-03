@@ -1,0 +1,35 @@
+<!--pages/serch/index.wxml-->
+<!-- 搜索框 -->
+<view>
+     <view>
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" focus placeholder="请输入影院名称或者地址"
+                    bindinput='inputTyping' value="{{inputValue}}"/>
+                </view>
+            </view>
+            <!-- 取消搜索 -->
+            <view class="weui-search-bar__cancel-btn" bindtap='hideInput'>取消</view>
+        </view>
+    </view>
+</view>
+
+
+<!-- 搜索显示的内容 -->
+<view class="container">
+  <block wx:for="{{bindSource}}" wx:key="*this">
+    <view class="flex item" bindtap="goSession" data-name="{{item.cinema_name}}">
+      <view class="flex_auto item_left">
+        <view><text class="cinema_name">{{item.cinema_name}}</text></view>
+        <view><text class="cinema_title">{{item.cinema_title}}</text></view>
+      </view>
+      <view class="item_right">
+        <view><text class="cinema_price">￥{{item.cinema_price}}起</text></view>
+      </view>
+    </view>
+  </block>
+</view>
+

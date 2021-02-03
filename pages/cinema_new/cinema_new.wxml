@@ -1,0 +1,44 @@
+<!-- 头部轮播位置 -->
+<swiper class="imageContainer" bindchange="handleChange" previous-margin="200rpx" next-margin="200rpx">
+  <block wx:for="{{lists}}" wx:key="*this">
+    <swiper-item class="item">
+      <image class="itemImg {{currentIndex == index ? 'active': ''}}" src="{{item.move_image}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 日期 -->
+<view>
+  <scroll-view class="scroll-view_H" scroll-x="true">
+    <view class="scroll-view">
+      <view>
+        <view class="{{flag==0? 'select':''}}" id="0" data-name="{{Date}}" bindtap="switchNav">{{Date}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+
+<!-- 场次选择 -->
+<view class="cinemaBox" bindtap="buyTick">
+    <view class="seatList">
+      <view class="seatFirWidth">
+        <view class="flex-direction mr20">
+          <view class="show_time bold">10：00</view>
+          <view class="movieClo">12：00散场</view>
+        </view>
+        <view class="flex-direction flex-center-strat">
+            <view class="seatVersion">国语2D</view>
+            <view class="cinema_name">1号激光厅</view>
+          </view>
+      </view>
+      <view class="flex-direction">
+        <view class="size26 seatColor flex flex-align-center flex-bottom">
+          <view class="size40">20</view>元
+        </view>
+      </view>
+      <view class="buyTick">购票</view>
+    </view>
+</view>
+
+

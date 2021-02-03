@@ -1,0 +1,30 @@
+<!--个人中心页面-->
+
+
+<view class="container">
+  <!-- 头部部分 -->
+  <view class="my_header">
+    <view><image src="{{src}}"></image></view>
+    <view class="item_middle"><text class="userName">{{name}}</text></view>
+    <view>
+      <button class="btn_login" wx:if="{{canIUse}}" wx:if="{{shareshow}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即登录</button>
+    </view>
+  </view>
+
+  <!-- 中间内容部分 -->
+  <view class="my_body">
+    <view class="item_body" bindtap="history">
+      <view><text>喜欢的电影</text></view>
+    </view>
+
+    <view class="item_body" bindtap="bymove">
+      <view><text>我的订单</text></view>
+    </view>
+
+    <view class="item_body" bindtap="about">
+      <view><text>关于我们</text></view>
+    </view>
+
+    
+  </view>
+</view>

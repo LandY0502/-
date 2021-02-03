@@ -1,0 +1,41 @@
+<!-- 首页点映 -->
+
+
+<view class="container">
+  <!--电影轮播图-->
+  <view class="movie_header">
+    <swiper class="movie_lunbo" indicator-active-color="{{indicatoractivecolor}}" interval="{{interval}}"
+      indicator-dots="{{indicatordots}}" autoplay="{{autoplay}}">
+      <block wx:for="{{swiper_Images}}" wx:key="*this" circular="{{circular}}">
+        <swiper-item>
+          <image src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+
+  <!--内容-->
+  <view class="text">
+    <view class="line_flag"></view>
+    <text>正在上映</text>
+  </view>
+
+
+  <!--内容主体部分-->
+  <block wx:for="{{lists}}" wx:key="*this">
+    <view class="movie_content" catchtap="go" id="{{item.id}}">
+      <view class="item_left">
+        <!-- 电影图片 -->
+        <image src="{{item.move_image}}" />
+      </view>
+      <view class="item_middle">
+        <!-- 电影名字 -->
+        <view><text class="move_name">{{item.move_name}}</text></view>
+        <!-- 电影演员 -->
+        <view><text class="move_actor">{{item.move_actor}}</text></view>
+      </view>
+    </view>
+  </block>
+  
+</view>

@@ -1,0 +1,22 @@
+<!--pages/my/my_/movie_ticket/index.wxml-->
+<!--历史记录页面 -->
+
+
+<block wx:for="{{lists}}" wx:key="*this">
+    <view class="movie_content" id="{{item.id}}">
+      <view class="item_left">
+        <!-- 电影图片 -->
+        <image src="{{item.like_image}}" />
+      </view>
+      <view class="item_middle">
+        <!-- 电影名字 -->
+        <view><text class="move_name">{{item.like_name}}</text></view>
+        <!-- 操作按钮 -->
+        <!-- 电影演员 -->
+        <view><text class="move_actor">{{item.like_actor}}</text></view>
+      </view>
+      <view class="item_right" bindtap="del" id="{{item.id}}">
+        <view><text class="btn_del">删除</text></view>
+      </view>
+    </view>
+  </block>

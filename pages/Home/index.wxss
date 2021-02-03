@@ -1,0 +1,97 @@
+
+/*轮播图*/
+.movie_lunbo{
+  width: 100%;
+  height: 200px;
+}
+.movie_lunbo image{
+  width: 100%;
+  height: 200px;
+}
+
+/*文字*/
+view.text {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 10px 10px 12px;
+  font-size: 15px;
+  color: #656565;
+}
+view.text:before {
+  position: absolute;
+  display: block;
+  content: ' ';
+  left: -5px;
+  width: 2px;
+  height: 100%;
+  background-color: #09bb07;
+}
+.line_flag {
+    width: 3px;
+    height: 100%;
+    height: 18px;
+    display: inline-block;
+    background-color: #09bb07;
+}
+view.text text {
+  margin-left: 10px;
+  line-height: 18px;
+}
+
+
+
+
+/*首页内容css*/
+.movie_content {
+  padding: 10px;
+  background-color: #fff;
+  color: #787878;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+}
+.movie_content image {
+  display: block;
+  width: 65px;
+  height: 95px;
+}
+.item_middle {
+  flex: 1;
+  margin-left: 23px;
+  padding-top: 14px;
+  overflow: hidden;
+}
+.item_middle view{
+  margin-top: 0.4em;
+}
+.item_middle .move_name {
+  font-size: 16px;
+  color: #333;
+}
+
+.item_middle .move_actor {
+  font-size: 12px;
+  color: #666;
+  margin: 2px 0px;
+}
+
+.item_right .move_score {
+  font-size: 12px;
+  color: #cf616a;
+}
+
+.item_right .btn_action {
+  margin-top: 40px;
+  border: 1px solid #29cc6d;
+  border-radius: 2px;
+  color: #29cc6d;
+  display: inline-block;
+  padding: 2px 4px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+
+
